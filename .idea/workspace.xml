@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="08275aca-f46c-4d7e-9054-a2df773eccac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CustomerSegmentPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/EmailPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GeneralInformationPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/KYCFormPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/LandlinePhonePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/LanguagePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/LegalAddressPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MaticenjePravnogLicaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/OrganizationPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/OrganizationProfilePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/RegistrationDocumentPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TaxProfilePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UploadSignedDocumentsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ValidityDataPage.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2QpKyFwdD24zjj1i78dKgW4zVWB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.MaticenjePravnogLicaTest">
+    <configuration name="MaticenjePravnogLicaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MaticenjePravnogLicaPOM" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MaticenjePravnogLicaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaticenjePravnogLicaTest.testMaticenjePravnogLica" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MaticenjePravnogLicaPOM" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MaticenjePravnogLicaTest" />
+      <option name="METHOD_NAME" value="testMaticenjePravnogLica" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MaticenjePravnogLicaTest" />
+        <item itemvalue="JUnit.MaticenjePravnogLicaTest.testMaticenjePravnogLica" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="08275aca-f46c-4d7e-9054-a2df773eccac" name="Changes" comment="" />
+      <created>1686045336946</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686045336946</updated>
+    </task>
+    <servers />
+  </component>
+</project>
