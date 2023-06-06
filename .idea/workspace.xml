@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08275aca-f46c-4d7e-9054-a2df773eccac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CustomerSegmentPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/EmailPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GeneralInformationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/KYCFormPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/LandlinePhonePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/LanguagePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/LegalAddressPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MaticenjePravnogLicaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/OrganizationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/OrganizationProfilePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/RegistrationDocumentPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TaxProfilePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UploadSignedDocumentsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ValidityDataPage.java" afterDir="false" />
-    </list>
+    <list default="true" id="08275aca-f46c-4d7e-9054-a2df773eccac" name="Changes" comment="END TO END TEST POM MaticenjePravnogLica" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,6 +78,25 @@
       <option name="presentableId" value="Default" />
       <updated>1686045336946</updated>
     </task>
+    <task id="LOCAL-00001" summary="END TO END TEST POM MaticenjePravnogLica">
+      <created>1686057139374</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686057139374</updated>
+    </task>
+    <task id="LOCAL-00002" summary="END TO END TEST POM MaticenjePravnogLica">
+      <created>1686057353195</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686057353195</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="END TO END TEST POM MaticenjePravnogLica" />
+    <option name="LAST_COMMIT_MESSAGE" value="END TO END TEST POM MaticenjePravnogLica" />
   </component>
 </project>
