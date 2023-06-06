@@ -1,18 +1,12 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
-import org.openqa.selenium.*;
-import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
-import java.awt.*;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
-import org.openqa.selenium.interactions.Actions;
 
-public class MaticenjePravnogLicaTest {
+public class MAINMaticenjePravnogLicaTest {
 
     private WebDriver driver;
     private LoginPage loginPage;
