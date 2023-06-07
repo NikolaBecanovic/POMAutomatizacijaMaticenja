@@ -1,4 +1,5 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
 import org.junit.Test;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -20,6 +21,9 @@ public class MAINMaticenjePravnogLicaTest {
     private TaxProfilePage taxProfilePage;
     private CustomerSegmentPage customerSegmentPage;
     private OrganizationProfilePage organizationProfilePage;
+    private RepresentativePage representativePage;
+    private OwnerPage ownerPage;
+    private BeneficialOwnerPage beneficialOwnerPage;
     private KYCFormPage kycFormPage;
     private UploadSignedDocumentsPage uploadSignedDocumentsPage;
     private ValidityDataPage validityDataPage;
@@ -30,6 +34,7 @@ public class MAINMaticenjePravnogLicaTest {
     @Before
 
     public void setup() {
+
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
@@ -47,10 +52,19 @@ public class MAINMaticenjePravnogLicaTest {
         taxProfilePage = new TaxProfilePage(driver);
         customerSegmentPage = new CustomerSegmentPage(driver);
         organizationProfilePage = new OrganizationProfilePage(driver);
+        representativePage = new RepresentativePage(driver);
+        ownerPage = new OwnerPage(driver);
+        beneficialOwnerPage = new BeneficialOwnerPage(driver);
         uploadSignedDocumentsPage = new UploadSignedDocumentsPage(driver);
         validityDataPage = new ValidityDataPage(driver);
         kycFormPage = new KYCFormPage(driver);
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\nikola.becanovic\\Desktop\\KYC\\KYC Form.pdf");
 
+    }
+
+    @After
+    public void teardown() {
+        driver.quit();
     }
 
     @Test
@@ -65,13 +79,14 @@ public class MAINMaticenjePravnogLicaTest {
         organizationPage.startOrganizationEnrollment();
         System.out.println("Korisnik je uspješno započeo proces matičenja pravnog lica. ");
 
-        generalInformationPage.enterGeneralInformation("21917770", "TESTFIRMA", "TESTFIRMA", "1. 1. 1970.");
+        generalInformationPage.enterGeneralInformation("21912310", "TESTFIRMA", "TESTFIRMA", "1. 1. 1970.");
         System.out.println("Korisnik je uspješno unio osnovne podatke.");
         Thread.sleep(3000);
 
         registrationDocumentPage.enterRegistrationDocumentNumber("12ds3223e12");
         registrationDocumentPage.enterIssuingDate("1. 3. 2023.");
         registrationDocumentPage.clickCompleteButton();
+        System.out.println("Korisnik je uspješno popunio Registration Document formu.");
         Thread.sleep(3000);
 
         legalAddressPage.enterMesto("NOVI SAD");
@@ -79,25 +94,30 @@ public class MAINMaticenjePravnogLicaTest {
         legalAddressPage.enterStreet("AKSENTIJA MAKSIMOVIĆA");
         legalAddressPage.enterBuildingNo("188");
         legalAddressPage.clickCompleteButton();
+        System.out.println("Korisnik je uspješno popunio adresu");
         Thread.sleep(3000);
 
         landlinePhonePage.enterAreaCode("13");
         landlinePhonePage.enterNumber("1243435");
         landlinePhonePage.clickCompleteButton();
+        System.out.println("Korisnik je uspješno popunio broj telefona.");
         Thread.sleep(3000);
 
         emailPage.enterEmail("rere2@re.re");
         emailPage.clickCompleteButton();
+        System.out.println("Korisnik je uspješno popunio email adresu.");
         Thread.sleep(3000);
 
-        taxProfilePage.enterTaxNumber("113713137");
+        taxProfilePage.enterTaxNumber("113681030");
         taxProfilePage.clickCompleteButton();
-        taxProfilePage.clickCompleteButton();
+        System.out.println("Korisnik je uspješno unio PIB");
         Thread.sleep(3000);
+        taxProfilePage.clickCompleteButton();
 
         customerSegmentPage.enterCustomerSegment("No segment");
         customerSegmentPage.selectNoSegment();
         customerSegmentPage.clickCompleteButton();
+        System.out.println("Korisnik je uspješno dodao segment.");
         Thread.sleep(3000);
 
         organizationProfilePage.selectOwnershipKindPrivateEntity();
@@ -109,8 +129,10 @@ public class MAINMaticenjePravnogLicaTest {
         organizationProfilePage.clickCompleteButton();
         Thread.sleep(3000);
 
+
+
         // Test KYC form
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\nikola.becanovic\\Desktop\\KYC\\KYC Form.pdf");
+
         kycFormPage.clickKycTask();
         kycFormPage.enterPitanjeBR3("YES");
         kycFormPage.enterPitanjeBR4("Serbia");
@@ -124,6 +146,7 @@ public class MAINMaticenjePravnogLicaTest {
         uploadSignedDocumentsPage.clickKycForm();
         uploadSignedDocumentsPage.clickDragAndDrop();
         uploadSignedDocumentsPage.uploadDocument("C:\\Users\\nikola.becanovic\\Desktop\\KYC\\KYC Form.pdf");
+        System.out.println("Korisnik je uspješno uploadovao KYC formu.");
 
         // Test Validity data
         validityDataPage.clickValidityDataTask();
@@ -131,9 +154,6 @@ public class MAINMaticenjePravnogLicaTest {
         validityDataPage.clickValidityDataUpload();
         validityDataPage.clickDragAndDropValidity();
         validityDataPage.uploadValidityData("C:\\Users\\nikola.becanovic\\Desktop\\KYC\\KYC Form.pdf");
-
-
-
         System.out.println("Klijent je uspješno umatičen.");
     }
 
