@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08275aca-f46c-4d7e-9054-a2df773eccac" name="Changes" comment="END TO END TEST POM MaticenjePravnogLica">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BeneficialOwnerPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/OwnerPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/RepresentativePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MAINMaticenjePravnogLicaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MAINMaticenjePravnogLicaTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="08275aca-f46c-4d7e-9054-a2df773eccac" name="Changes" comment="END TO END TEST POM MaticenjePravnogLica" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686058099833</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="END TO END TEST POM MaticenjePravnogLica">
+      <created>1686122623483</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686122623483</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
