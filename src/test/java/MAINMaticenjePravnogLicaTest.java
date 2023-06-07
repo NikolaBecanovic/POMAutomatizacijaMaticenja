@@ -62,10 +62,6 @@ public class MAINMaticenjePravnogLicaTest {
 
     }
 
-    @After
-    public void teardown() {
-        driver.quit();
-    }
 
     @Test
     public void testMaticenjePravnogLica() throws Exception {
@@ -79,7 +75,7 @@ public class MAINMaticenjePravnogLicaTest {
         organizationPage.startOrganizationEnrollment();
         System.out.println("Korisnik je uspješno započeo proces matičenja pravnog lica. ");
 
-        generalInformationPage.enterGeneralInformation("21912310", "TESTFIRMA", "TESTFIRMA", "1. 1. 1970.");
+        generalInformationPage.enterGeneralInformation("21912506", "TESTFIRMA", "TESTFIRMA", "1. 1. 1970.");
         System.out.println("Korisnik je uspješno unio osnovne podatke.");
         Thread.sleep(3000);
 
@@ -108,7 +104,7 @@ public class MAINMaticenjePravnogLicaTest {
         System.out.println("Korisnik je uspješno popunio email adresu.");
         Thread.sleep(3000);
 
-        taxProfilePage.enterTaxNumber("113681030");
+        taxProfilePage.enterTaxNumber("113681917");
         taxProfilePage.clickCompleteButton();
         System.out.println("Korisnik je uspješno unio PIB");
         Thread.sleep(3000);
@@ -129,7 +125,11 @@ public class MAINMaticenjePravnogLicaTest {
         organizationProfilePage.clickCompleteButton();
         Thread.sleep(3000);
 
+        //unos zakonskog zastupnika, vlasnika i stvarnog vlasnika
 
+        representativePage.enterRepresentative("Julijan T", "1. 3. 2023.");
+        ownerPage.addOwner("Julijan test", "100");
+        beneficialOwnerPage.enterBeneficialOwner("Test Test");
 
         // Test KYC form
 
