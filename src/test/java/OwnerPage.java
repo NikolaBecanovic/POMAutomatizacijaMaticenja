@@ -40,6 +40,7 @@ public class OwnerPage {
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
         System.out.println("Korisnik je uspješno unio vlasnika pravnog lica.");
+        Thread.sleep(5000);
     }
 
 

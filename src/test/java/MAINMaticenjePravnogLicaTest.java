@@ -1,5 +1,4 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
 import org.junit.Test;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +13,7 @@ public class MAINMaticenjePravnogLicaTest {
     private LanguagePage languagePage;
     private OrganizationPage organizationPage;
     private GeneralInformationPage generalInformationPage;
+    private AMLScore amlScore;
     private RegistrationDocumentPage registrationDocumentPage;
     private LegalAddressPage legalAddressPage;
     private LandlinePhonePage landlinePhonePage;
@@ -25,6 +25,7 @@ public class MAINMaticenjePravnogLicaTest {
     private OwnerPage ownerPage;
     private BeneficialOwnerPage beneficialOwnerPage;
     private KYCFormPage kycFormPage;
+    private UploadDocumentsTask uploadDocumentsTask;
     private UploadSignedDocumentsPage uploadSignedDocumentsPage;
     private ValidityDataPage validityDataPage;
 
@@ -45,6 +46,7 @@ public class MAINMaticenjePravnogLicaTest {
         languagePage = new LanguagePage(driver);
         organizationPage = new OrganizationPage(driver);
         generalInformationPage = new GeneralInformationPage(driver);
+        amlScore = new AMLScore(driver);
         registrationDocumentPage = new RegistrationDocumentPage(driver);
         legalAddressPage = new LegalAddressPage(driver);
         landlinePhonePage = new LandlinePhonePage(driver);
@@ -55,6 +57,7 @@ public class MAINMaticenjePravnogLicaTest {
         representativePage = new RepresentativePage(driver);
         ownerPage = new OwnerPage(driver);
         beneficialOwnerPage = new BeneficialOwnerPage(driver);
+        uploadDocumentsTask = new UploadDocumentsTask(driver);
         uploadSignedDocumentsPage = new UploadSignedDocumentsPage(driver);
         validityDataPage = new ValidityDataPage(driver);
         kycFormPage = new KYCFormPage(driver);
@@ -75,9 +78,15 @@ public class MAINMaticenjePravnogLicaTest {
         organizationPage.startOrganizationEnrollment();
         System.out.println("Korisnik je uspješno započeo proces matičenja pravnog lica. ");
 
-        generalInformationPage.enterGeneralInformation("21912506", "TESTFIRMA", "TESTFIRMA", "1. 1. 1970.");
+        generalInformationPage.enterGeneralInformation("21915068", "TESTFIRMA", "TESTFIRMA", "1. 1. 1970.");
         System.out.println("Korisnik je uspješno unio osnovne podatke.");
         Thread.sleep(3000);
+
+        //AML score
+
+        amlScore.completeAML();
+
+        //registration document forma
 
         registrationDocumentPage.enterRegistrationDocumentNumber("12ds3223e12");
         registrationDocumentPage.enterIssuingDate("1. 3. 2023.");
@@ -104,7 +113,7 @@ public class MAINMaticenjePravnogLicaTest {
         System.out.println("Korisnik je uspješno popunio email adresu.");
         Thread.sleep(3000);
 
-        taxProfilePage.enterTaxNumber("113681917");
+        taxProfilePage.enterTaxNumber("113696988");
         taxProfilePage.clickCompleteButton();
         System.out.println("Korisnik je uspješno unio PIB");
         Thread.sleep(3000);
@@ -118,7 +127,7 @@ public class MAINMaticenjePravnogLicaTest {
 
         organizationProfilePage.selectOwnershipKindPrivateEntity();
         organizationProfilePage.selectLegalStructureDOO();
-        organizationProfilePage.enterDelatnost("0000 – 00000–Bez oznake delatnosti");
+        organizationProfilePage.enterDelatnost("No segment");
         organizationProfilePage.selectBezDelatnosti();
         organizationProfilePage.selectOrganizationSizeMicro();
         organizationProfilePage.selectResidentalStatusNotClassified();
@@ -127,7 +136,7 @@ public class MAINMaticenjePravnogLicaTest {
 
         //unos zakonskog zastupnika, vlasnika i stvarnog vlasnika
 
-        representativePage.enterRepresentative("Julijan T", "1. 3. 2023.");
+        representativePage.enterRepresentative("Julijan T ", "1. 3. 2023.");
         ownerPage.addOwner("Julijan test", "100");
         beneficialOwnerPage.enterBeneficialOwner("Test Test");
 
@@ -140,6 +149,10 @@ public class MAINMaticenjePravnogLicaTest {
         kycFormPage.selectPitanjeBR1();
         kycFormPage.selectPitanjeBR6();
         kycFormPage.clickCompleteButton();
+
+        //Klika na task upload signed documents
+
+        uploadDocumentsTask.openUploadSignedDocuments();
 
         // Test Upload signed documents
         uploadSignedDocumentsPage.clickUploadSignedDocument();

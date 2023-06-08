@@ -39,8 +39,6 @@ public class GeneralInformationPage {
         driver.findElement(dugmeComplete).click();
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
-        wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
-        driver.findElement(dugmeComplete).click();
     }
 
 

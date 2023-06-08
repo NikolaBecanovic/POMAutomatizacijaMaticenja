@@ -28,6 +28,7 @@ public class BeneficialOwnerPage {
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
         System.out.println("Korisnik je uspješno unio stvarnog vlasnika pravnog lica.");
+        Thread.sleep(5000);
     }
 
 
