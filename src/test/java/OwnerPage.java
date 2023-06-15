@@ -22,25 +22,19 @@ public class OwnerPage {
 
     public void addOwner(String ownerName, String percentage) throws InterruptedException {
 
-        Thread.sleep(3000);
         wait.until(ExpectedConditions.elementToBeClickable(addOwner));
         driver.findElement(addOwner).click();
         wait.until(ExpectedConditions.elementToBeClickable(vlasnici));
         driver.findElement(vlasnici).click();
         driver.findElement(vlasnici).sendKeys(ownerName);
-        wait.until(ExpectedConditions.elementToBeClickable(vlasnici));
-        driver.findElement(vlasnici).click();
         wait.until(ExpectedConditions.elementToBeClickable(procenatVlasnistva));
         driver.findElement(procenatVlasnistva).click();
         driver.findElement(procenatVlasnistva).sendKeys(percentage);
-        Thread.sleep(3000);
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
-        Thread.sleep(3000);
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
         System.out.println("Korisnik je uspješno unio vlasnika pravnog lica.");
-        Thread.sleep(5000);
     }
 
 

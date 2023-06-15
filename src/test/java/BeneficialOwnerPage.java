@@ -20,7 +20,7 @@ public class BeneficialOwnerPage {
     }
 
     public void enterBeneficialOwner(String beneficialOwnerName) throws InterruptedException {
-        Thread.sleep(5000);
+
         wait.until(ExpectedConditions.elementToBeClickable(BeneficialOwner));
         driver.findElement(BeneficialOwner).sendKeys(beneficialOwnerName);
         wait.until(ExpectedConditions.elementToBeClickable(BeneficialOwnerZastupnikTest));
@@ -28,7 +28,7 @@ public class BeneficialOwnerPage {
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
         System.out.println("Korisnik je uspješno unio stvarnog vlasnika pravnog lica.");
-        Thread.sleep(5000);
+
     }
 
 

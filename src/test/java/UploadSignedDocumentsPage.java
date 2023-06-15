@@ -57,7 +57,6 @@ public class UploadSignedDocumentsPage {
 
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
-        Thread.sleep(5000);
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
         System.out.println("Korisnik je uspješno uradio upload KYC forme.");
