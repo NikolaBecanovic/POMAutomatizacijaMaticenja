@@ -15,7 +15,7 @@ public class UploadDocumentsTask {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(60));
     }
-    public void openUploadSignedDocuments() {
+    public void openUploadSignedDocuments()  {
         wait.until(ExpectedConditions.elementToBeClickable(UploadSignedDocument));
         driver.findElement(UploadSignedDocument).click();
     }

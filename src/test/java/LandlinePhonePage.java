@@ -21,6 +21,7 @@ public class LandlinePhonePage {
     }
 
     public void enterAreaCode(String code) {
+
         WebElement areaCodeField = wait.until(ExpectedConditions.elementToBeClickable(areaCode));
         areaCodeField.sendKeys(code);
     }
@@ -30,9 +31,10 @@ public class LandlinePhonePage {
         numberField.sendKeys(phoneNumber);
     }
 
-    public void clickCompleteButton() {
+    public void clickCompleteButton() throws InterruptedException {
         WebElement completeButtonElement = wait.until(ExpectedConditions.elementToBeClickable(completeButton));
         completeButtonElement.click();
+
     }
 
 

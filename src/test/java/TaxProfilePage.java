@@ -24,9 +24,10 @@ public class TaxProfilePage {
         taxNumberField.sendKeys(number);
     }
 
-    public void clickCompleteButton() {
+    public void clickCompleteButton() throws Exception {
         WebElement completeButtonElement = wait.until(ExpectedConditions.elementToBeClickable(completeButton));
         completeButtonElement.click();
+
     }
 
 

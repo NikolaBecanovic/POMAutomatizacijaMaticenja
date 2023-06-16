@@ -25,9 +25,10 @@ public class EmailPage {
         emailField.sendKeys(emailAddress);
     }
 
-    public void clickCompleteButton() {
+    public void clickCompleteButton() throws InterruptedException{
         WebElement completeButtonElement = wait.until(ExpectedConditions.elementToBeClickable(completeButton));
         completeButtonElement.click();
+
     }
 
 

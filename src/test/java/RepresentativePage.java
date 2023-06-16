@@ -21,6 +21,7 @@ public class RepresentativePage {
     }
 
     public void enterRepresentative(String representativeName, String startDateValue) throws InterruptedException {
+
         wait.until(ExpectedConditions.presenceOfElementLocated(zastupnik));
         //driver.findElement(zastupnik).click();
         driver.findElement(zastupnik).sendKeys(representativeName);
@@ -31,6 +32,7 @@ public class RepresentativePage {
         driver.findElement(startDate).sendKeys(startDateValue);
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
+
         System.out.println("Korisnik je uspješno unio zastupnika pravnog lica.");
     }
 

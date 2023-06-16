@@ -41,7 +41,7 @@ public class MAINMaticenjePravnogLicaTest {
         WebDriverManager.chromedriver().setup();
 
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         loginPage = new LoginPage(driver);
         languagePage = new LanguagePage(driver);
         organizationPage = new OrganizationPage(driver);
@@ -78,7 +78,7 @@ public class MAINMaticenjePravnogLicaTest {
         organizationPage.startOrganizationEnrollment();
         System.out.println("Korisnik je uspješno započeo proces matičenja pravnog lica. ");
 
-        generalInformationPage.enterGeneralInformation("21914240", "TESTFIRMA", "TESTFIRMA", "1. 1. 1970.");
+        generalInformationPage.enterGeneralInformation("67043391", "TESTFIRMA", "TESTFIRMA", "1. 1. 1970.");
         System.out.println("Korisnik je uspješno unio osnovne podatke.");
 
         //AML score
@@ -108,7 +108,7 @@ public class MAINMaticenjePravnogLicaTest {
         emailPage.clickCompleteButton();
         System.out.println("Korisnik je uspješno popunio email adresu.");
 
-        taxProfilePage.enterTaxNumber("113692604");
+        taxProfilePage.enterTaxNumber("113733692");
         taxProfilePage.clickCompleteButton();
         System.out.println("Korisnik je uspješno unio PIB");
         taxProfilePage.clickCompleteButton();
@@ -120,14 +120,16 @@ public class MAINMaticenjePravnogLicaTest {
 
         organizationProfilePage.selectOwnershipKindPrivateEntity();
         organizationProfilePage.selectLegalStructureDOO();
-        organizationProfilePage.enterDelatnost("0000");
+        organizationProfilePage.enterDelatnost("0000 – 00000–Bez oznake delatnosti");
+        organizationProfilePage.selectBezDelatnosti();
         organizationProfilePage.selectOrganizationSizeMicro();
         organizationProfilePage.selectResidentalStatusNotClassified();
         organizationProfilePage.clickCompleteButton();
+
         //unos zakonskog zastupnika, vlasnika i stvarnog vlasnika
 
         representativePage.enterRepresentative("Julijan T ", "1. 3. 2023.");
-        ownerPage.addOwner("Julijan T ", "100");
+        ownerPage.addOwner("Julijan Test", "100");
         beneficialOwnerPage.enterBeneficialOwner("Test Test");
 
         // Test KYC form
@@ -145,19 +147,21 @@ public class MAINMaticenjePravnogLicaTest {
         uploadDocumentsTask.openUploadSignedDocuments();
 
         // Test Upload signed documents
-        uploadSignedDocumentsPage.clickUploadSignedDocument();
+
         uploadSignedDocumentsPage.clickKycForm();
         uploadSignedDocumentsPage.clickDragAndDrop();
         uploadSignedDocumentsPage.uploadDocument("C:\\Users\\nikola.becanovic\\Desktop\\KYC\\KYC Form.pdf");
         System.out.println("Korisnik je uspješno uploadovao KYC formu.");
 
         // Test Validity data
+
         validityDataPage.clickValidityDataTask();
         validityDataPage.clickCompleteButton();
         validityDataPage.clickValidityDataUpload();
         validityDataPage.clickDragAndDropValidity();
         validityDataPage.uploadValidityData("C:\\Users\\nikola.becanovic\\Desktop\\KYC\\KYC Form.pdf");
         System.out.println("Klijent je uspješno umatičen.");
+
     }
 
 

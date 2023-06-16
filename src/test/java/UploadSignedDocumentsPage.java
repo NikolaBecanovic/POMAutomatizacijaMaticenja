@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.interactions.Actions;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
@@ -20,6 +21,7 @@ public class UploadSignedDocumentsPage {
     public UploadSignedDocumentsPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+
     }
 
     public void clickUploadSignedDocument() {
@@ -38,12 +40,13 @@ public class UploadSignedDocumentsPage {
     }
 
     public void uploadDocument(String filePath) throws AWTException, InterruptedException {
+
         // Otvori dijalog za odabir datoteke
 
         StringSelection stringSelection = new StringSelection(filePath);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+        this.robot = new Robot();
         robot.setAutoDelay(1000);
-        robot = new Robot();
 
         // Simulira pritisak na dugmad CTRL+V za zalijepiti putanju do datoteke
 

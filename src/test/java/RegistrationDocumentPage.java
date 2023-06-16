@@ -23,6 +23,7 @@ public class RegistrationDocumentPage {
     public void enterRegistrationDocumentNumber(String number) {
         WebElement registrationDocumentNumberField = wait.until(ExpectedConditions.elementToBeClickable(registrationDocumentNumber));
         registrationDocumentNumberField.sendKeys(number);
+
     }
 
     public void enterIssuingDate(String date) {
@@ -30,9 +31,10 @@ public class RegistrationDocumentPage {
         issuingDateField.sendKeys(date);
     }
 
-    public void clickCompleteButton() {
+    public void clickCompleteButton() throws Exception {
         WebElement completeButtonElement = wait.until(ExpectedConditions.elementToBeClickable(completeButton));
         completeButtonElement.click();
+
     }
 
 

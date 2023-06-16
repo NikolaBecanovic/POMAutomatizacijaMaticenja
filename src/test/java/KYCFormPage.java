@@ -55,7 +55,8 @@ public class KYCFormPage {
         driver.findElement(pitanjeBR2odgovor).click();
     }
 
-    public void selectPitanjeBR1() {
+    public void selectPitanjeBR1() throws InterruptedException {
+        Thread.sleep(3000);
         wait.until(ExpectedConditions.elementToBeClickable(pitanjeBR1));
         driver.findElement(pitanjeBR1).click();
         driver.findElement(pitanjeBR1odgovor).click();
@@ -70,14 +71,13 @@ public class KYCFormPage {
         action.sendKeys(Keys.ESCAPE).perform();
     }
 
-    public void clickCompleteButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
-        driver.findElement(dugmeComplete).click();
+    public void clickCompleteButton() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
         System.out.println("Korisnik je uspješno ispunio KYC formu.");
+
     }
 
 

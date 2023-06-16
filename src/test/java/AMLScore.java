@@ -17,7 +17,7 @@ public class AMLScore {
     }
 
     public void completeAML() throws InterruptedException {
-        Thread.sleep(7000);
+
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
     }

@@ -14,6 +14,7 @@ public class OwnerPage {
     private By vlasnici = By.xpath("(//input[contains(@id, 'mat-input-')])[1]");
     private By procenatVlasnistva = By.xpath("(//input[contains(@id, 'mat-input-')])[2]");
     private By dugmeComplete = By.xpath("//span[text()='Complete']");
+    private By vlasnikTestKlik = By.xpath("//span[text()=' Julijan Test ']");
 
     public OwnerPage(WebDriver driver) {
         this.driver = driver;
@@ -27,11 +28,16 @@ public class OwnerPage {
         wait.until(ExpectedConditions.elementToBeClickable(vlasnici));
         driver.findElement(vlasnici).click();
         driver.findElement(vlasnici).sendKeys(ownerName);
+        wait.until(ExpectedConditions.elementToBeClickable(vlasnikTestKlik));
+        driver.findElement(vlasnikTestKlik).click();
         wait.until(ExpectedConditions.elementToBeClickable(procenatVlasnistva));
         driver.findElement(procenatVlasnistva).click();
         driver.findElement(procenatVlasnistva).sendKeys(percentage);
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
+        wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
+        driver.findElement(dugmeComplete).click();
+
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
         System.out.println("Korisnik je uspješno unio vlasnika pravnog lica.");

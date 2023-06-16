@@ -30,21 +30,25 @@ public class LegalAddressPage {
     public void clickPopUp() {
         WebElement popUpElement = wait.until(ExpectedConditions.elementToBeClickable(popUp));
         popUpElement.click();
+
     }
 
     public void enterStreet(String streetValue) {
         WebElement streetField = wait.until(ExpectedConditions.elementToBeClickable(street));
         streetField.sendKeys(streetValue);
+
     }
 
     public void enterBuildingNo(String buildingNoValue) {
         WebElement buildingNoField = wait.until(ExpectedConditions.elementToBeClickable(buildingNo));
         buildingNoField.sendKeys(buildingNoValue);
+
     }
 
-    public void clickCompleteButton() {
+    public void clickCompleteButton() throws InterruptedException {
         WebElement completeButtonElement = wait.until(ExpectedConditions.elementToBeClickable(completeButton));
         completeButtonElement.click();
+
     }
 
 

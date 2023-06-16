@@ -22,16 +22,19 @@ public class CustomerSegmentPage {
     }
 
     public void enterCustomerSegment(String segment) {
+
         WebElement customerSegmentField = wait.until(ExpectedConditions.elementToBeClickable(customerSegment));
         customerSegmentField.sendKeys(segment);
     }
 
     public void selectNoSegment() {
+
         WebElement noSegmentElement = wait.until(ExpectedConditions.elementToBeClickable(noSegment));
         noSegmentElement.click();
     }
 
-    public void clickCompleteButton() {
+    public void clickCompleteButton() throws InterruptedException {
+
         WebElement completeButtonElement = wait.until(ExpectedConditions.elementToBeClickable(completeButton));
         completeButtonElement.click();
     }

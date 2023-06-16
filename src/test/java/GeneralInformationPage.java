@@ -17,7 +17,7 @@ public class GeneralInformationPage {
     private By dugmeZatvori = By.xpath("//span[text()='Zatvori']");
     private By dugmeComplete = By.xpath("//span[text()='Complete']");
 
-    public GeneralInformationPage(WebDriver driver) {
+    public GeneralInformationPage (WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(60));
     }
@@ -39,6 +39,7 @@ public class GeneralInformationPage {
         driver.findElement(dugmeComplete).click();
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
+
     }
 
 

@@ -46,7 +46,8 @@ public class OrganizationProfilePage {
     public void enterDelatnost(String delatnostValue) {
         WebElement delatnostElement = wait.until(ExpectedConditions.elementToBeClickable(delatnost));
         delatnostElement.click();
-        delatnostElement.sendKeys(delatnostValue);
+        //delatnostElement.sendKeys(delatnostValue);
+
     }
 
     public void selectBezDelatnosti() {
@@ -68,9 +69,10 @@ public class OrganizationProfilePage {
         notClassifiedResidentalElement.click();
     }
 
-    public void clickCompleteButton() {
+    public void clickCompleteButton() throws InterruptedException {
         WebElement completeButtonElement = wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         completeButtonElement.click();
+
     }
 
 

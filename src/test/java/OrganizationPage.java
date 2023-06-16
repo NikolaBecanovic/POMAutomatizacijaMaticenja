@@ -31,6 +31,7 @@ public class OrganizationPage {
         wait.until(ExpectedConditions.elementToBeClickable(klijent));
         driver.findElement(klijent).click();
         driver.findElement(startProcess).click();
+
     }
 
 }

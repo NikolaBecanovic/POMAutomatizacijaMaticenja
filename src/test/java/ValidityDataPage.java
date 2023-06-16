@@ -10,6 +10,9 @@ import java.time.Duration;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+
+
+
 public class ValidityDataPage {
 
     private WebDriver driver;
@@ -20,6 +23,7 @@ public class ValidityDataPage {
     private By dugmeComplete = By.xpath("//span[text()='Complete']");
     private Robot robot;
     public ValidityDataPage(WebDriver driver) {
+
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(60));
     }
@@ -30,9 +34,10 @@ public class ValidityDataPage {
         driver.findElement(validityDataTask).click();
     }
 
-    public void clickCompleteButton() {
+    public void clickCompleteButton() throws  InterruptedException {
         wait.until(ExpectedConditions.presenceOfElementLocated(dugmeComplete));
         driver.findElement(dugmeComplete).click();
+        Thread.sleep(7000);
     }
 
     public void clickValidityDataUpload() {
@@ -45,10 +50,13 @@ public class ValidityDataPage {
         driver.findElement(dragAndDropValidity).click();
     }
 
-    public void uploadValidityData(String filePath) throws InterruptedException {
+    public void uploadValidityData(String filePath) throws AWTException{
+
         // Otvori dijalog za odabir datoteke
-        StringSelection validityDataSelection = new StringSelection(filePath);
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(validityDataSelection, null);
+
+        StringSelection stringSelection = new StringSelection(filePath);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+        this.robot = new Robot();
         robot.setAutoDelay(1000);
 
         // Simulira pritisak na dugmad CTRL+V za zalijepiti putanju do datoteke
@@ -63,11 +71,11 @@ public class ValidityDataPage {
 
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
-        Thread.sleep(5000);
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
         wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
         driver.findElement(dugmeComplete).click();
-        System.out.println(" Klijent je uspješno umatičen. ");
+        wait.until(ExpectedConditions.elementToBeClickable(dugmeComplete));
+        driver.findElement(dugmeComplete).click();
     }
 }

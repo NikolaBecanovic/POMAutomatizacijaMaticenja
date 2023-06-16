@@ -21,6 +21,7 @@ public class BeneficialOwnerPage {
 
     public void enterBeneficialOwner(String beneficialOwnerName) throws InterruptedException {
 
+
         wait.until(ExpectedConditions.elementToBeClickable(BeneficialOwner));
         driver.findElement(BeneficialOwner).sendKeys(beneficialOwnerName);
         wait.until(ExpectedConditions.elementToBeClickable(BeneficialOwnerZastupnikTest));
